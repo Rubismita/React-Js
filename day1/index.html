@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text{
+            background-color: brown;
+        }
+        #div1{
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <select id="topics"></select>
+    Topic:<input type="text" id="text1">
+    Value:<input type="text" id="value">
+    <button id="btn Add" value="Add" onclick="Add()">Add Task</button>
+    <div id="div1">
+        <div>
+            <form>  
+                <b> Select you favourite Topic  using dropdown list </b>  
+                <select id = "myList" onchange = "favTutorial()" >  
+                <option> ---Choose Topic--- </option>  
+                <option> Java </option>  
+                <option> Angular </option>  
+                <option> HTML </option>  
+                <option> CSS </option>  
+                </select>  
+                <p> Your selected topic is:   
+                <input type = "text" id = "favourite" size = "20"> </p>  
+                </form>  
+        </div>
+        <ol id="list"></ol>
+
+
+    </div>
+    <script>
+        function clicked(){
+            alert('Button Clicked');
+        }
+    
+        function favTutorial() {  
+            var mylist = document.getElementById("myList");  
+            document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;  
+        }  
+
+        function Add(){
+            //var topic = document.getElementById("topics");
+            
+            var option = document.createElement("option");
+            option.innerHTML = document.getElementById("text1").value;
+            option.value = document.getElementById("value").value;
+
+            var sel = document.getElementById("myList");
+            sel.appendChild(option);
+            console.log(option);
+            console.log(myList);
+       
+        }
+    </script>
+
+</body>
+</html>

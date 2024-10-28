@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #changeTextButton {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Change Text Example</h1>
+    <p id="textParagraph">This is the original text.</p>
+    <button id="changeTextButton">Change Text</button>
+
+    <script>
+        document.getElementById("changeTextButton").onclick = function() {
+            document.getElementById("textParagraph").innerText = "The text has been changed!";
+        };
+    </script>
+
+</body>
+</html>

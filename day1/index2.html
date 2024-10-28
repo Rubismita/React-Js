@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Change Background Color Of Div</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hover to Change Background Color</h1>
+    <div id="colorBox">Hover over me!</div>
+
+    <script>
+        const colorBox = document.getElementById("colorBox");
+
+        colorBox.onmouseover = function() {
+            colorBox.style.backgroundColor = "lightcoral";
+        };
+
+        colorBox.onmouseout = function() {
+            colorBox.style.backgroundColor = "lightblue";
+        };
+    </script>
+
+</body>
+</html>

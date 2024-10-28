@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Cart</title>
+    <link rel="stylesheet" href="cart1.css">
+</head>
+<body>
+    <div id="count">Count: 0</div>
+    <div class="product-container">
+        <div class="product">
+            <img src="TV.jpeg" alt="Product 1">
+            <h4>TV</h4>
+            <p>Price: 10,000</p>
+            <div class="cart-controls">
+                <button class="add-to-cart" onclick="tv.addToCart()">Add to Cart</button>
+                <button class="remove-from-cart" onclick="tv.removeFromCart()">Remove from Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="Laptop.jpeg" alt="Product 2">
+            <h4>Laptop</h4>
+            <p>Price: 20,000</p>
+            <div class="cart-controls">
+                <button class="add-to-cart" onclick="laptop.addToCart()">Add to Cart</button>
+                <button class="remove-from-cart" onclick="laptop.removeFromCart()">Remove from Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="Phone.jpeg" alt="Product 3">
+            <h4>Phone</h4>
+            <p>Price: 15,000</p>
+            <div class="cart-controls">
+                <button class="add-to-cart" onclick="phone.addToCart()">Add to Cart</button>
+                <button class="remove-from-cart" onclick="phone.removeFromCart()">Remove from Cart</button>
+            </div>
+        </div>
+    </div>
+    <div id="message" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <button onclick="processPayment()">Proceed to Payment</button>
+    
+    <script src="cart1.js"></script>
+</body>
+</html>

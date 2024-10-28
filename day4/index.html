@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="data"></div>
+    <button id="print" onclick="show()">Click here to print data</button>
+    <script>
+        const data=[];
+       
+        //fetch api using promise
+    //     function load(){
+    //      const myfetchpromise=fetch('https://jsonplaceholder.typicode.com/usersfffff');
+    //      console.log(myfetchpromise)
+    //      myfetchpromise.then((Response)=>
+    //      {
+    //         return Response.json();
+    //     }).then((d)=>{
+    //         data.push(d);
+    //         console.log(data);
+    //     }).catch((err)=>{
+    //        document.getElementById("data").innerHTML=err;
+    //     })
+    // }
+    // load()
+    //     const show=()=>{
+    //         for(let i=0;i<data[0].length;i++){
+    //             document.getElementById("data").innerHTML+=data[0][i].name+"-------"+data[0][i].email+"<br>";
+    //         }
+    //     }
+ 
+    //fetch api using async await
+    async function show()
+    {
+        const respose =await fetch('https://jsonplaceholder.typicode.com/users');
+        const data=await respose.json();
+        console.log(data);
+        for(let i=0;i<data.length;i++){
+            document.getElementById("data").innerHTML+=data[i].name+"-------"+data[i].email+"<br>";
+        }
+    }
+    show();
+    </script>
+</body>
+</html>
